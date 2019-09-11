@@ -1,26 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Nav from './Nav';
+import Starwars from './starwars/Starwars';
+import Planets from './starwars/Planets';
+import Species from './starwars/Species';
+import Starships from './starwars/Starships';
+import Vehicles from './starwars/Vehicles';
+import People from './starwars/People';
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Nav />
+        <Switch>
+          {/* <Route paht='/' component={Home} /> */}
+          <Route path="/" exact component={Starwars} />
+          <Route path="/planets" exact component={Planets} />
+          <Route path="/species" exact component={Species} />
+          <Route path="/vehicles" exact component={Vehicles} />
+          <Route path="/starships" exact component={Starships} />
+          <Route path="/people" exact component={People} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
+
+// const Home = () => (
+//   <div>
+//     <h1>Home Page</h1>
+//   </div>
+// );
 
 export default App;
