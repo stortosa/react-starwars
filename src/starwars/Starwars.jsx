@@ -53,8 +53,31 @@ export default class Starwars extends Component {
         </Link>
         <h1>Films of Star Wars:</h1>
 
-      <ul>{this.state.filmList.map(film => <li>{film.title}</li>)}</ul>
-      
+        {/* <ul>{this.state.filmList.map(film => <li>{film.title}</li>)}</ul> */}
+        <table>
+          <thead className="">
+            <tr>
+              <th><h2>Title</h2></th>
+              <th><h3>Director</h3></th>
+              <th><h3>Producer</h3></th>
+              <th><h4>Release Date</h4></th>
+              <th><h4>Episode Id</h4></th>
+              <th><h4>Opening Crawl</h4></th>
+            </tr>
+          </thead>
+          <tbody className="">
+            {this.state.filmList.map((film, idx) => (
+              <tr>
+                <td><h3>{film.title}</h3></td>
+                <td><h3>{film.director}</h3></td>
+                <td><h5>{film.producer}</h5></td>
+                <td><h5>{film.release_date}</h5></td>
+                <td><h5>{film.episode_id}</h5></td>
+                <td><p>{film.opening_crawl}</p></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div >
     )
   }
