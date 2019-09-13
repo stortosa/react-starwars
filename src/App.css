@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 .App {
   text-align: center;
 }
@@ -22,15 +26,23 @@ nav {
 
 /*boton para starwars*/
 .starbtn {
-  background-color: black;
+  display: flex;
+  background-color: rgba(230, 226, 32, 0.993);
   color: white;
   border-radius: 5px;
-  width: 180px;
+  align-items: center;
+  justify-content: space-around;
+  justify-items: center;
+  margin: 5px;
+  padding: 5px;
+  width: auto;
   height: 50px;
+  list-style: none;
 }
 
 .starbtn:hover{
   cursor: pointer;
+  color: black;
 }
 
 .starwars{
@@ -41,19 +53,20 @@ nav {
   justify-items: center;
   margin-top: 2%;
   padding: 10px;
-  width: 450px;
+  width: auto;
   /*height: 400px; */
   box-sizing: border-box;
   /* background: transparent; */
   background: rgb(255, 255, 255);
-  box-shadow: 0px 10px 20px rgba(29, 28, 28, 0.2);
+  box-shadow: 20px 10px 20px rgba(206, 138, 138, 0.5);
   border-radius: 15px;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 .starwars:hover {
-  background: #dafa72;
+  background: #71746d;
   box-sizing: border-box;
-  box-shadow: 0px 10px 20px rgba(29, 28, 28, 0.9);
+  box-shadow: 20px 10px 20px rgba(48, 47, 47, 0.9);
   border-radius: 15px;
+  color:#fff;
 }
