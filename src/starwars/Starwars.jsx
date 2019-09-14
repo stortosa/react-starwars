@@ -14,7 +14,7 @@ export default class Starwars extends Component {
 
   getFilms = () => {
 
-    axios.get(`https://swapi.co/api/films/`)
+    axios.get(`https://swapi.co/api/films/?format=json`)
 
       .then(response => {
         this.setState({
@@ -27,8 +27,28 @@ export default class Starwars extends Component {
 
   }
 
+  sortByName() {
+    let orderedList = [...this.state.filmList];
+
+    orderedList.sort((a, b) => {
+      if (a.title > b.title) {
+        return 1;
+      } if (a.title < b.title) {
+        return -1;
+      }
+      return 0;
+    });
+
+    this.setState({
+      ...this.state,
+      filmList: orderedList
+    })
+    console.log(this.state.filmList)
+  }
+
   componentDidMount() {
     this.getFilms();
+    this.sortByName();
   }
 
   render() {
@@ -41,6 +61,7 @@ export default class Starwars extends Component {
         <h1>Films of Star Wars:</h1>
 
         {/* <ul>{this.state.filmList.map(film => <li>{film.title}</li>)}</ul> */}
+        <button onClick={() => this.sortByName()}>Sort by Name</button>
 
         <div className="starwars">
           <table>
