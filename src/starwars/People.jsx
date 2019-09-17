@@ -149,36 +149,62 @@ export default class People extends Component {
       })
   }
 
+  sortByName() {
+    let orderedList = [...this.state.peopleList];
+
+    orderedList.sort((a, b) => {
+      if (a.name > b.name) {
+        return 1;
+      } if (a.name < b.name) {
+        return -1;
+      }
+      return 0;
+    });
+
+    this.setState({
+      ...this.state,
+      peopleList: orderedList
+    })
+    console.log(this.state.peopleList)
+  }
+
   componentDidMount() {
     // this.getPeople();
     this.getMorePeople();
+    this.sortByName();
   }
 
   render() {
     return (
-      <div className="">
-        <table>
-          <thead className="">
-            <tr>
-              <th><h2>Name:</h2></th>
-              <th><h3>Birth Year</h3></th>
-              <th><h3>Mass</h3></th>
-              <th><h3>Height</h3></th>
-              <th><h4>Gender</h4></th>
-            </tr>
-          </thead>
-          <tbody className="">
-            {this.state.peopleList.map((people, idx) => (
-              <tr>
-                <td><h3>{people.name}</h3></td>
-                <td><h3>{people.birth_year}</h3></td>
-                <td><h5>{people.mass}</h5></td>
-                <td><h5>{people.height}</h5></td>
-                <td><h5>{people.gender}</h5></td>
+      <div>
+        <div>
+          <button onClick={() => this.sortByName()}>Sort by Name</button>
+        </div>
+        <div className="container">
+
+          <table>
+            <thead className="tablehead">
+              <tr className="">
+                <th className="namerow"><h2>Name:</h2></th>
+                <th><h3>Birth Year:</h3></th>
+                <th><h3>Mass:</h3></th>
+                <th><h3>Height:</h3></th>
+                <th><h4>Gender:</h4></th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="tablebody">
+              {this.state.peopleList.map((people, idx) => (
+                <tr className="">
+                  <td><h3>{people.name}</h3></td>
+                  <td><h3>{people.birth_year}</h3></td>
+                  <td><h5>{people.mass}</h5></td>
+                  <td><h5>{people.height}</h5></td>
+                  <td><h5>{people.gender}</h5></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     )
   }

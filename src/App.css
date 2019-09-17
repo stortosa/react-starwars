@@ -71,4 +71,31 @@ nav {
   color:#fff;
 }
 
+.container {
+  display: flex;
+  border-radius: 15px;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-around;
+
+}
+
 /*Design Cards*/
+.tablehead {
+  /* display: flex; */
+  border-radius: 15px;
+  background-color: yellow;
+  align-items: center;
+  justify-items: center;
+}
+
+.tablebody {
+  background-color: #93FF33; 
+  align-items: center;
+  justify-items: center;
+}
+
+.namerow {
+  background-color: #33FFA2;
+  
+}

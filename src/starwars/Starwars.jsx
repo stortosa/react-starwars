@@ -61,7 +61,7 @@ export default class Starwars extends Component {
         <h1>Films of Star Wars:</h1>
 
         {/* <ul>{this.state.filmList.map(film => <li>{film.title}</li>)}</ul> */}
-        <button onClick={() => this.sortByName()}>Sort by Name</button>
+        <button onClick={() => this.sortByName()}>Sort by Title</button>
 
         <div className="starwars">
           <table>
