@@ -11,8 +11,8 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
-  background: lightblue;
-  color: white; 
+  background: rgba(53, 54, 53, 0.6);
+  color: rgb(245, 242, 51); 
 }
 
 .nav-links{
@@ -21,7 +21,8 @@ nav {
   justify-content: space-around;
   align-items: center;
   list-style: none;
-  
+  color: rgb(245, 242, 51); 
+
 }
 
 /*boton para starwars*/

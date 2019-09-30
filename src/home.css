@@ -32,8 +32,8 @@ section.sec3 {
 
 section.sec1 h1 {
   margin: 0px;
-  padding: 0px;
-  font-size: 50px;
+  padding-top: 150px;
+  font-size: 100px;
   color: yellow;
 }
 
@@ -51,4 +51,30 @@ section.secText h1 {
 
 section.secText p {
   font-size: 38px;
+}
+
+.btn-home {
+  display: flex;
+  flex-direction:column;
+  flex-wrap: wrap;
+}
+.starbtn {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(230, 226, 32, 0.993);
+  color: white;
+  border-radius: 5px;
+  /* align-items: center; */
+  /* justify-content: space-around; */
+  /* justify-items: center; */
+  margin: 5px;
+  padding: 5px;
+  width: 200px;
+  height: 50px;
+  text-decoration: none;
+}
+
+.starbtn:hover{
+  cursor: pointer;
+  color: black;
 }
