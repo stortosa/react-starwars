@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Nav from './Nav';
+import Home from './Home';
 import Starwars from './starwars/Starwars';
 import Planets from './starwars/Planets';
 import Species from './starwars/Species';
@@ -17,7 +18,8 @@ function App() {
         <Nav />
         <Switch>
           {/* <Route paht='/' component={Home} /> */}
-          <Route path="/" exact component={Starwars} />
+          <Route path="/" exact component={Home} />
+          <Route path="/starwars" exact component={Starwars} />
           <Route path="/planets" exact component={Planets} />
           <Route path="/species" exact component={Species} />
           <Route path="/vehicles" exact component={Vehicles} />

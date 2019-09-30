@@ -64,7 +64,7 @@ export default class Starwars extends Component {
         <button onClick={() => this.sortByName()}>Sort by Title</button>
 
         <div className="starwars">
-          <table>
+          {/* <table>
             <thead className="">
               <tr>
                 <th><h2>Title</h2></th>
@@ -87,7 +87,19 @@ export default class Starwars extends Component {
                 </tr>
               ))}
             </tbody>
-          </table>
+          </table> */}
+        </div>
+        <div className="containerStar">
+          {this.state.filmList.map((film, idx) => (
+            <article className="containerCard">
+              <h1>{film.title}</h1>
+              <h2>{film.director}</h2>
+              <h2>{film.producer}</h2>
+              <h3>{film.release_date}</h3>
+              <h3>{film.episode_id}</h3>
+              <p>{film.opening_crawl}</p>
+            </article>
+          ))}
         </div>
       </div >
     )

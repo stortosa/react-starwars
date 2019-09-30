@@ -10,9 +10,11 @@ export default class Nav extends Component {
 
     return (
       <nav>
-        {/* <h2>Logo</h2> */}
         <ul className="nav-links">
         <Link style={navStyle} to="/">
+          <li>Home</li>
+        </Link>
+        <Link style={navStyle} to="/starwars">
           <li>Star Wars</li>
         </Link>
         <Link style={navStyle} to="/planets">

@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+section {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+section.sec1 {
+  background: url("./b3.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+section.sec2 {
+  background: url("./nave1.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+section.sec3 {
+  background: url("./b1.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+section.sec1 h1 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 50px;
+  color: yellow;
+}
+
+section.secText {
+  padding: 50px 100px;
+  height: auto;
+}
+
+section.secText h1 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 60px;
+  color: black;
+}
+
+section.secText p {
+  font-size: 38px;
+}

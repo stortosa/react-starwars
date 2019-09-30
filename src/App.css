@@ -99,3 +99,25 @@ nav {
   background-color: #33FFA2;
   
 }
+
+.containerCard {
+  margin: 10px;
+  padding: 10px;
+  width: 98%;
+  background: rgb(253, 252, 252);
+  color: black;
+  box-sizing: border-box;
+  transition: 0.4s;
+}
+
+.containerCard:hover {
+  background: black;
+  color:yellow;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 10px 10px rgba(48, 47, 47, 0.6);
+  border-radius: 5px;
+}
+.containerStar {
+  display: flex;
+  flex-wrap: wrap;
+}
